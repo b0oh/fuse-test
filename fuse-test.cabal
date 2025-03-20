@@ -1,0 +1,19 @@
+cabal-version:      3.4
+name:               fuse-test
+version:            0.1.0.0
+license:            ISC
+license-file:       LICENSE
+author:             b0oh
+maintainer:         git@b0oh.me
+category:           System
+build-type:         Simple
+
+common warnings
+    ghc-options: -Wall
+
+executable hello-fs
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:    base, bytestring, HFuse, unix,
+    hs-source-dirs:   app
+    default-language: GHC2021
